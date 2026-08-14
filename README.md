@@ -4,7 +4,7 @@
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web plugin that checks whether your local Harness is up to date — right from the sidebar.
 
-<img src="assets/screenshot.png" alt="dsh-update-checker screenshot" width="50%" />
+<img src="assets/screenshot.png" alt="dsh-update-checker screenshot" width="25%" />
 
 > **English**: Check DeepSeek Harness updates from the sidebar (local `dsh --version` vs npm `latest`/`next`).
 >

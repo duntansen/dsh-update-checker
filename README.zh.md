@@ -4,7 +4,7 @@
 
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（DSH）Web 插件：在侧边栏一键自检你的 DeepSeek Harness 是否有新版本。
 
-<img src="assets/screenshot.png" alt="dsh-update-checker 截图" width="50%" />
+<img src="assets/screenshot.png" alt="dsh-update-checker 截图" width="25%" />
 
 > **中文**: 在侧栏一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
 >
