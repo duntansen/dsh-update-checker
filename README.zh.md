@@ -2,13 +2,13 @@
 
 [English](README.md) | [中文](README.zh.md)
 
-一个 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（DSH）Web 插件：在侧边栏一键自检你的 DeepSeek Harness 是否有新版本。
+一个 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（DSH）Web 插件：在设置页一键自检你的 DeepSeek Harness 是否有新版本。
 
 <img src="assets/screenshot.png" alt="dsh-update-checker 截图" width="25%" />
 
-> **中文**: 在侧栏一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
+> **中文**: 在设置页一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
 >
-> **English**: Check DeepSeek Harness updates from the sidebar (local `dsh --version` vs npm `latest`/`next`).
+> **English**: Check DeepSeek Harness updates from Settings (local `dsh --version` vs npm `latest`/`next`).
 
 ## 功能特性
 
@@ -16,7 +16,7 @@
 - **一键更新**：发现新版本后，点击按钮执行 `npx -y @deepseek-ai/dsh@latest` 拉取最新版，面板实时显示安装进度
 - **版本时间线**：展示最近 8 个已发布版本及发布时间，绿色高亮你的当前版本
 - **自动检查 + 通知**：每 6 小时后台自动检查；检测到新版本时弹出浏览器系统通知
-- **检查历史**：最近 20 次检查记录保存到 `~/.dsh/dsh-update-checker-history.json`，页面内可查看
+- **检查历史**：最近 10 次检查记录保存到 `~/.dsh/dsh-update-checker-history.json`，页面内可查看
 - 语义化版本比较（正确处理 `rc` 预发布段，如 `0.1.0-rc.6 > 0.1.0-rc.3`）
 
 ## 安装

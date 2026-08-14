@@ -2,13 +2,13 @@
 
 [English](README.md) | [中文](README.zh.md)
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web plugin that checks whether your local Harness is up to date — right from the sidebar.
+A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web plugin that checks whether your local Harness is up to date — right from Settings.
 
 <img src="assets/screenshot.png" alt="dsh-update-checker screenshot" width="25%" />
 
-> **English**: Check DeepSeek Harness updates from the sidebar (local `dsh --version` vs npm `latest`/`next`).
+> **English**: Check DeepSeek Harness updates from Settings (local `dsh --version` vs npm `latest`/`next`).
 >
-> **中文**: 在侧栏一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
+> **中文**: 在设置页一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
 
 ## Features
 
@@ -16,7 +16,7 @@ A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web 
 - **One-click update**: when a new version is found, click a button to run `npx -y @deepseek-ai/dsh@latest` and watch the live install progress in the panel
 - **Version timeline**: shows the most recent 8 published versions with release dates, highlighting your current version
 - **Auto-check & notifications**: re-checks every 6 hours in the background; a browser system notification fires when a new version is detected
-- **Check history**: the last 20 checks are saved to `~/.dsh/dsh-update-checker-history.json` and shown in the panel
+- **Check history**: the last 10 checks are saved to `~/.dsh/dsh-update-checker-history.json` and shown in the page
 - Semantic version comparison (handles `rc` prerelease segments correctly)
 
 ## Install
@@ -65,7 +65,7 @@ dsh-update-checker/
 │   └── screenshot.png  # README screenshot
 └── lib/
     ├── index.js        # host entry: HTTP routes + version comparison
-    └── client.js       # client entry: sidebar button + result panel
+    └── client.js       # client entry: Settings page
 ```
 
 ## License
