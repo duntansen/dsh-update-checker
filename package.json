@@ -1,6 +1,6 @@
 {
   "name": "dsh-update-checker",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "DSH web plugin: check DeepSeek Harness for updates from the sidebar — local dsh --version vs npm registry latest/next, one-click update, timeline, notifications, history.",
   "type": "module",
   "main": "lib/index.js",

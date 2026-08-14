@@ -35,7 +35,7 @@ Sidebar footer button states:
 dsh plugin --profile web add dsh-update-checker
 ```
 
-Then restart `dsh web` and open the GUI. A `⟳` button appears at the bottom of the sidebar.
+Then restart `dsh web` and open the GUI. A `⟳` button appears at the bottom of the sidebar, and a full **Update Check** page is available under **Settings → Update Check**.
 
 > Installing from source / local development:
 > ```sh
@@ -44,7 +44,12 @@ Then restart `dsh web` and open the GUI. A `⟳` button appears at the bottom of
 
 ## Usage
 
-Click the `⟳` button at the sidebar footer to open the panel:
+Two entry points:
+
+- **Sidebar footer button** (`⟳`): quick check; click to open a floating panel.
+- **Settings → Update Check**: full page with the same features.
+
+The panel / page shows:
 
 - **Current / latest / next versions** and a status badge (`✓ up to date` / `⬆ update available`)
 - **One-click update** button (`⬇ Update to x.y.z`) when an update is available — shows live terminal output, then prompts to restart `dsh web` when done
