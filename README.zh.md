@@ -21,7 +21,7 @@
 
 ## 安装
 
-从 GitHub 安装（发布到 npm 前推荐此方式）：
+从 GitHub 安装：
 
 ```sh
 dsh plugin --profile web add github:duntansen/dsh-update-checker

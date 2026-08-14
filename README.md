@@ -21,7 +21,7 @@ A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web 
 
 ## Install
 
-From GitHub (recommended until published to npm):
+From GitHub:
 
 ```sh
 dsh plugin --profile web add github:duntansen/dsh-update-checker
