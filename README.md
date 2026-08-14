@@ -15,19 +15,9 @@ A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web 
 - **Update check**: reads the local version via `dsh --version`, compares it with the npm registry `latest` / `next` dist-tags of `@deepseek-ai/dsh`
 - **One-click update**: when a new version is found, click a button to run `npx -y @deepseek-ai/dsh@latest` and watch the live install progress in the panel
 - **Version timeline**: shows the most recent 8 published versions with release dates, highlighting your current version
-- **Auto-check & notifications**: re-checks every 6 hours in the background; a red badge appears on the sidebar button and a browser system notification fires when a new version is detected
+- **Auto-check & notifications**: re-checks every 6 hours in the background; a browser system notification fires when a new version is detected
 - **Check history**: the last 20 checks are saved to `~/.dsh/dsh-update-checker-history.json` and shown in the panel
 - Semantic version comparison (handles `rc` prerelease segments correctly)
-
-Sidebar footer button states:
-
-| Button | Meaning |
-|---|---|
-| `⟳` | idle (waiting) |
-| `…` | checking… |
-| `⏳` | updating… |
-| `⬆` | new version available (with red dot badge) |
-| `⚠` | check failed (network / parse) |
 
 ## Install
 
@@ -35,7 +25,7 @@ Sidebar footer button states:
 dsh plugin --profile web add dsh-update-checker
 ```
 
-Then restart `dsh web` and open the GUI. A `⟳` button appears at the bottom of the sidebar, and a full **Update Check** page is available under **Settings → Update Check**.
+Then restart `dsh web` and open the GUI. Open **Settings → Update Check** to use it.
 
 > Installing from source / local development:
 > ```sh
@@ -44,12 +34,9 @@ Then restart `dsh web` and open the GUI. A `⟳` button appears at the bottom of
 
 ## Usage
 
-Two entry points:
+Open **Settings → Update Check** — a full page with all features:
 
-- **Sidebar footer button** (`⟳`): quick check; click to open a floating panel.
-- **Settings → Update Check**: full page with the same features.
-
-The panel / page shows:
+The page shows:
 
 - **Current / latest / next versions** and a status badge (`✓ up to date` / `⬆ update available`)
 - **One-click update** button (`⬇ Update to x.y.z`) when an update is available — shows live terminal output, then prompts to restart `dsh web` when done
@@ -57,7 +44,7 @@ The panel / page shows:
 - **Check history**: recent check times and version transitions
 - **Re-check** button and the last check time
 
-Auto-check: the plugin checks once 1.5s after loading and then every 6 hours. When a new version is detected, the sidebar button shows a red dot and a browser notification is fired (the first time, the browser asks for notification permission).
+Auto-check: the plugin checks on page load and then every 6 hours. When a new version is detected, a browser notification is fired (the first time, the browser asks for notification permission).
 
 ## How it works
 
@@ -66,7 +53,7 @@ Auto-check: the plugin checks once 1.5s after loading and then every 6 hours. Wh
   - `GET /dsh-update-check/status` — live update task output (polled)
   - `POST /dsh-update-check/update` — start the update (same-origin protected, single instance)
 - Local version is read with `dsh --version`; npm registry data via global `fetch`. Commands run cross-platform (Windows `cmd.exe` / POSIX `/bin/sh`).
-- **Client**: a `sidebar.footer.action` entry (`__ModuleLoader__` CJS bundle, no build step) that calls the routes above and renders the button + panel.
+- **Client**: a `settings.section` entry (`__ModuleLoader__` CJS bundle, no build step) that calls the routes above and renders the page.
 
 ## Project layout
 
