@@ -1,0 +1,4 @@
+# dsh-update-checker bundle patch: inserts the plugin into a profile's layer stack.
+- insert:
+    - id: dsh-update-checker
+      name: 'dsh-update-checker'

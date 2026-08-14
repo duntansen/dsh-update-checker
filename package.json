@@ -1,0 +1,26 @@
+{
+  "name": "dsh-update-checker",
+  "version": "1.0.0",
+  "description": "DSH web plugin: check DeepSeek Harness for updates from the sidebar — local dsh --version vs npm registry latest/next.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ]
+}
