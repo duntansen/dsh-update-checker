@@ -4,7 +4,7 @@
 
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness)（DSH）Web 插件：在设置页一键自检你的 DeepSeek Harness 是否有新版本。
 
-<img src="assets/screenshot.png" alt="dsh-update-checker 截图" width="25%" />
+<img src="assets/screenshot.png" alt="dsh-update-checker 截图" width="50%" />
 
 > **中文**: 在设置页一键自检 DeepSeek Harness 是否有新版本（本地 `dsh --version` vs npm 最新版）。
 >
@@ -13,21 +13,23 @@
 ## 功能特性
 
 - **版本自检**：通过 `dsh --version` 读取本地版本，对比 npm registry 中 `@deepseek-ai/dsh` 的 `latest` / `next` 通道
-- **一键更新**：发现新版本后，点击按钮执行 `npx -y @deepseek-ai/dsh@latest` 拉取最新版，面板实时显示安装进度
+- **一键更新**：发现新版本后，点击按钮执行 `npx -y @deepseek-ai/dsh@latest` 拉取最新版，页面实时显示安装进度
 - **版本时间线**：展示最近 8 个已发布版本及发布时间，绿色高亮你的当前版本
-- **自动检查 + 通知**：每 6 小时后台自动检查；检测到新版本时弹出浏览器系统通知
+- **自动检查 + 通知**：设置页打开时每 6 小时自动检查；检测到新版本时弹出浏览器系统通知
 - **检查历史**：最近 10 次检查记录保存到 `~/.dsh/dsh-update-checker-history.json`，页面内可查看
 - 语义化版本比较（正确处理 `rc` 预发布段，如 `0.1.0-rc.6 > 0.1.0-rc.3`）
 
 ## 安装
 
+从 GitHub 安装（发布到 npm 前推荐此方式）：
+
 ```sh
-dsh plugin --profile web add dsh-update-checker
+dsh plugin --profile web add github:duntansen/dsh-update-checker
 ```
 
 然后重启 `dsh web` 并打开界面，进入**设置 → 更新检查**即可使用。
 
-> 源码安装 / 本地开发：
+> 本地开发用 link 方式（实时同步，重启 `dsh web` 加载改动）：
 > ```sh
 > dsh plugin --profile web add link:/绝对路径/dsh-update-checker
 > ```
@@ -42,7 +44,7 @@ dsh plugin --profile web add dsh-update-checker
 - **检查历史**：最近几次检查的时间与版本变化
 - **重新检查**按钮和上次检查时间
 
-自动检查：打开页面时检查一次，之后每 6 小时检查一次。发现新版本时弹出浏览器通知（首次会请求通知权限）。
+自动检查：打开设置页时检查一次，之后在页面保持打开期间每 6 小时检查一次。发现新版本时弹出浏览器通知（首次会请求通知权限）。
 
 ## 工作原理
 
