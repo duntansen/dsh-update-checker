@@ -29,11 +29,6 @@ dsh plugin --profile web add github:duntansen/dsh-update-checker
 
 然后重启 `dsh web` 并打开界面，进入**设置 → 更新检查**即可使用。
 
-> 本地开发用 link 方式（实时同步，重启 `dsh web` 加载改动）：
-> ```sh
-> dsh plugin --profile web add link:/绝对路径/dsh-update-checker
-> ```
-
 ## 使用方法
 
 打开**设置 → 更新检查**，完整页面展示：

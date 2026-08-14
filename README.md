@@ -29,11 +29,6 @@ dsh plugin --profile web add github:duntansen/dsh-update-checker
 
 Then restart `dsh web` and open the GUI. Open **Settings → Update Check** to use it.
 
-> Local development via a link (live sync, restart `dsh web` to reload changes):
-> ```sh
-> dsh plugin --profile web add link:/absolute/path/to/dsh-update-checker
-> ```
-
 ## Usage
 
 Open **Settings → Update Check** — a full page with all features:
