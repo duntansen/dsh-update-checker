@@ -1,5 +1,7 @@
 # dsh-update-checker
 
+[English](README.md) | [中文](README.zh.md)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) (DSH) web plugin that checks whether your local Harness is up to date — right from the sidebar.
 
 ## Features
